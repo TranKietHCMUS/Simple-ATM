@@ -45,18 +45,62 @@ function tradeMoney() {
                 }
             }
         }
-        var rs = "";
-        if (L[num] == 0) rs = "Khong the doi tien!";
-        else {
-            rs += num + " = ";
-            while(num != 0) {
-                rs += backtrack[num]
-                num -= backtrack[num];
-                if (num != 0) rs += " + ";
+        output(num);
+    }
+}
+
+function output(num) {
+    var rs = "";
+    if (L[num] == 0) rs = "Khong the doi tien!";
+    else {
+        var count = new Array();
+        for (var i = 0; i < 9; i++)
+            count[i] = 0;
+        rs += num + " = ";
+        var count1 = 0, count2 = 0;
+        while(num != 0) {
+            count1++;
+            switch(backtrack[num]) {
+                case 1:
+                    count[0]++;
+                    break;
+                case 2:
+                    count[1]++;
+                    break;
+                case 5:
+                    count[2]++;
+                    break;
+                case 10:
+                    count[3]++;
+                    break;
+                case 20:
+                    count[4]++;
+                    break;
+                case 50:
+                    count[5]++;
+                    break;
+                case 100:
+                    count[6]++;
+                    break;
+                case 200:
+                    count[7]++;
+                    break;
+                case 500:
+                    count[8]++;
+                    break;
             }
-            document.getElementById("result").innerHTML = rs;
-            showPopup(true);
+            num -= backtrack[num];
         }
+        for (var i = 0; i < 9; i++) {
+            if (count[i] != 0) {
+                count2 += count[i];
+                if (count[i] == 1) rs += arrMoney[i];
+                else rs += arrMoney[i] + "*" + count[i];
+                if (count2 < count1) rs += " + ";
+            }
+        }
+        document.getElementById("result").innerHTML = rs;
+        showPopup(true);
     }
 }
 
