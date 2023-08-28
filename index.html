@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple ATM</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="main-content">
+        <h1>Simple ATM</h1>
+        Amount of money:
+        <input type="number" id="money">
+        <br>
+        <br>
+        <div id="key-board">
+            <div class="row">
+                <button id="7" onclick="addInput(7)">7</button>
+                <button id="8" onclick="addInput(8)">8</button>
+                <button id="9" onclick="addInput(9)">9</button>
+                <button id="remove" onclick="addInput(-1)"><---</button>
+            </div>
+            <div class="row">
+                <button id="4" onclick="addInput(4)">4</button>
+                <button id="5" onclick="addInput(5)">5</button>
+                <button id="6" onclick="addInput(6)">6</button>
+                <button id="clear" onclick="addInput('C')">C</button>
+            </div>
+            <div class="row">
+                <button id="1" onclick="addInput(1)">1</button>
+                <button id="2" onclick="addInput(2)">2</button>
+                <button id="3" onclick="addInput(3)">3</button>
+                <button id="enter" onclick="tradeMoney()">Enter</button>
+            </div>
+            <div class="row">
+                <button id="0" onclick="addInput(0)">0</button>
+                <button id="00" onclick="addInput(10)">00</button>
+            </div>
+        </div>
+        <div id="temp"></div>
+    </div>
+
+    <div id="popup">
+        <h2>Here is your money</h2>
+        <div id="result"></div>
+        <button onclick="showPopup(false)">OK</button>
+    </div>
+    <footer>
+        &#169; This Program belongs to Tran Kiet
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+body {
+    color: white;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main-content h1 {
+    color: grey;
+    font-size: 30px;
+    text-shadow: 2px 2px 2px black;
+}
+
+#main-content {
+    color: black;
+    text-align: center;
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    border: 3px solid black;
+    border-radius: 30px;
+
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    position: fixed;
+}
+
+.row button {
+    width: 50px;
+    height: 50px;
+    justify-content: space-around;
+    margin: 3px;
+}
+
+#temp {
+    width: 300px;
+    margin: 25px 50px;
+    height: 10px;
+    background-color: grey;
+    border-radius: 20px;
+}
+
+#popup {
+    width:300px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 3mm;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    position: fixed;
+}
+
+#popup button {
+    background-color: #fff;
+    border: 1px solid black;
+    color: black;
+    display: block;
+    border-radius: 10px;
+    text-align: center;
+    margin: 30px;
+    padding: 10px;
+    width: 100px;
+    font-size: 15px;
+    margin-left: 33.33%;
+}
+
+#popup h2 {
+    color: grey;
+    text-shadow: 2px 2px 2px grey;
+}
+
+#result {
+    color: black;
+    font-size: 20px;
+}
+
+#popup button:hover {
+    background-color: lightgrey;
+}
