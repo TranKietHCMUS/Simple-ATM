@@ -10,7 +10,6 @@ function addInput(par) {
     }
     else input += par;
     document.getElementById("money").value = input;
-    console.log(typeof(input));
 }
 
 var L = new Array();
@@ -58,14 +57,15 @@ function tradeMoney() {
             document.getElementById("result").innerHTML = rs;
             showPopup(true);
         }
-        input = "";
     }
 }
 
 function showPopup(bool) {
     if (bool) {
-      document.getElementById('popup').style.visibility = 'visible'
+        document.getElementById('popup').style.visibility = 'visible';
     } else {
-      document.getElementById('popup').style.visibility = 'hidden'
+        document.getElementById('popup').style.visibility = 'hidden';
+        input = "";
+        document.getElementById("money").value = input;
     }
-  }
+}
