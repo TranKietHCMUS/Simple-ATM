@@ -26,7 +26,7 @@ function tradeMoney() {
         for (var i = 0; i <= num; i++) {
             L[i] = 0;
             backtrack[i] = 0;
-            for (var j = 0; j < 8; j++) {
+            for (var j = 0; j < 9; j++) {
                 if (i == arrMoney[j]) {
                     L[i] = 1;
                     backtrack[i] = i;
