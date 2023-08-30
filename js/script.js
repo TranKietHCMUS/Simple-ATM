@@ -1,16 +1,28 @@
 var input = "";
+var items = Array.from(document.querySelectorAll(".item"));
 showPopup(false);
 
-function addInput(par) {
-    if (par == 10) input += "00";
-    else if (par == 'C') input = "";
-    else if (par == -1) {
-        if (parseInt(input) < 10) input = "";
-        else input = parseInt(input/10).toString();
-    }
-    else input += par;
-    document.getElementById("money").value = input;
-} 
+// function addInput(par) {
+//     if (par == 10) input += "00";
+//     else if (par == 'C') input = "";
+//     else if (par == -1) {
+//         if (parseInt(input) < 10) input = "";
+//         else input = parseInt(input/10).toString();
+//     }
+//     else input += par;
+//     document.getElementById("money").value = input;
+// } 
+
+items.forEach(function(par) {
+    par.addEventListener("click", function() {
+        if (par.innerHTML == "AC") input = "";
+        else if (par.innerHTML == "DEL") {
+            input = input.substring(0, input.length - 1);
+        }
+        else input += par.innerHTML;
+        document.getElementById("money").value = input;
+    })
+})
 
 var L = new Array();
 var backtrack = new Array();

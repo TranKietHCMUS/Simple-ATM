@@ -10,31 +10,31 @@
     <div id="main-content">
         <h1>Simple ATM</h1>
         Amount of money:
-        <input type="number" id="money">
+        <input type="text" id="money">
         <br>
         <br>
         <div id="key-board">
             <div class="row">
-                <button id="7" onclick="addInput(7)">7</button>
-                <button id="8" onclick="addInput(8)">8</button>
-                <button id="9" onclick="addInput(9)">9</button>
-                <button id="remove" onclick="addInput(-1)"><---</button> 
+                <button id="7" class="item">7</button>
+                <button id="8" class="item">8</button>
+                <button id="9" class="item">9</button>
+                <button id="remove" class="item">DEL</button> 
             </div>
             <div class="row">
-                <button id="4" onclick="addInput(4)">4</button>
-                <button id="5" onclick="addInput(5)">5</button>
-                <button id="6" onclick="addInput(6)">6</button>
-                <button id="clear" onclick="addInput('C')">C</button>
+                <button id="4" class="item">4</button>
+                <button id="5" class="item">5</button>
+                <button id="6" class="item">6</button>
+                <button id="clear" class="item"">AC</button>
             </div>
             <div class="row">
-                <button id="1" onclick="addInput(1)">1</button>
-                <button id="2" onclick="addInput(2)">2</button>
-                <button id="3" onclick="addInput(3)">3</button>
+                <button id="1" class="item">1</button>
+                <button id="2" class="item">2</button>
+                <button id="3" class="item">3</button>
                 <button id="enter" onclick="tradeMoney()">Enter</button>
             </div>
             <div class="row">
-                <button id="0" onclick="addInput(0)">0</button>
-                <button id="00" onclick="addInput(10)">00</button>
+                <button id="0" class="item">0</button>
+                <button id="00" class="item">00</button>
             </div>
         </div>
         <div id="temp"></div>
