@@ -10,7 +10,7 @@ function addInput(par) {
     }
     else input += par;
     document.getElementById("money").value = input;
-}
+} 
 
 var L = new Array();
 var backtrack = new Array();
